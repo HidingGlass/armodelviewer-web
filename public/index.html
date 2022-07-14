@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>AR Model Viewer</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <div id="holder" class="centered">
+    
+    <model-viewer alt="A 3D model of the glove prerelease NFT" src="./assets/prerelease_A.glb"
+    ios-src="./assets/prerelease_A.usdz" ar ar-modes="webxr scene-viewer quick-look"
+    environment-image="./assets/brown_photostudio_02_1k.hdr" seamless-poster shadow-intensity="1" camera-controls
+    xr-environment autoplay poster="./assets/Rawlings_NFT_Logo_White.png">
+    <!-- <div id="test-ar-button"></div> -->
+    <div class="progress-bar" slot="progress-bar"></div>
+  </model-viewer>
+  <h1>TAP ICON TO EXPERIENCE IN AR</h1>
+
+  </div>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA84AHU3KyVCMXA2ZYrB7oaopUAkvUch5I",
+      authDomain: "ar-model-viewer-e61ad.firebaseapp.com",
+      projectId: "ar-model-viewer-e61ad",
+      storageBucket: "ar-model-viewer-e61ad.appspot.com",
+      messagingSenderId: "790028387035",
+      appId: "1:790028387035:web:c9a266b9f4d91e287602fe"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+
+</html>

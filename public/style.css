@@ -1,0 +1,72 @@
+:root {
+    --poster-color: transparent;
+  }
+
+html {
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+}
+
+
+body {
+    position: relative;
+    background-color: black;
+    font-family: sans-serif;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* #default-poster {
+    background-color: green !important;
+} */
+
+#holder {
+    background-color: black;
+    width: 800px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.progress-bar {
+    display: none;
+    visibility: hidden;
+  }
+  
+
+/* #test-ar-button {
+    background-color: green;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    transform: scale(2) !important;
+    transform-origin: bottom right;
+  } */
+
+model-viewer {
+    width: 700px;
+    height: 700px;
+    background-color: black;
+}
+
+model-viewer::part(default-ar-button) {
+    transform: scale(3) !important;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+  }
